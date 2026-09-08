@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wellness Room | Private Massage | Lahore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #C9A84C;
+            --dark: #1a0a0a;
+            --deep-maroon: #2D0A0A;
+            --cream: #F5F0E8;
+            --green: #1B3A2D;
+            --light-gold: #E8D5A3;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--dark);
+            color: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            color: var(--light-gold);
+        }
+
+        .nav-cta {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--light-gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d0305 0%, #1a0810 30%, #2D0A0A 60%, #1B3A2D 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 25px;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            color: var(--cream);
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--light-gold);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: rgba(245, 240, 232, 0.75);
+            font-size: 1rem;
+            line-height: 1.8;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .pill {
+            background: rgba(201, 168, 76, 0.1);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 18px 45px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 18px 45px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(201, 168, 76, 0.1);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* DIVIDER */
+        .gold-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gold-divider::before,
+        .gold-divider::after {
+            content: '';
+            width: 80px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        .lotus {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-label {
+            text-align: center;
+            color: var(--gold);
+            font-size: 0.75rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            color: var(--cream);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: rgba(245, 240, 232, 0.65);
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+            max-width: 550px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        /* WHY US SECTION */
+        .why-section {
+            background: linear-gradient(180deg, var(--dark) 0%, #120508 100%);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: rgba(201, 168, 76, 0.05);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .why-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .why-card p {
+            color: rgba(245, 240, 232, 0.7);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* SERVICES SECTION */
+        .services-section {
+            background: linear-gradient(180deg, #120508 0%, var(--green) 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+        }
+
+        .service-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(201, 168, 76, 0.25);
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h4 {
+            color: var(--cream);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        /* PRICING SECTION */
+        .pricing-section {
+            background: var(--dark);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            padding: 45px 35px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.05);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--dark);
+            padding: 5px 20px;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+        }
+
+        .pricing-card h3 {
+            color: var(--gold);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: var(--cream);
+            margin: 20px 0 5px;
+        }
+
+        .price-sub {
+            color: rgba(245, 240, 232, 0.5);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            color: rgba(245, 240, 232, 0.75);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.88rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            line-height: 1.5;
+        }
+
+        .pricing-features li:before {
+            content: '✦ ';
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        /* PRIVACY SECTION */
+        .privacy-section {
+            background: linear-gradient(135deg, #0d0305, #1B3A2D);
+            text-align: center;
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-item {
+            padding: 30px 20px;
+        }
+
+        .privacy-number {
+            font-size: 3rem;
+            color: rgba(201, 168, 76, 0.2);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .privacy-item h4 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .privacy-item p {
+            color: rgba(245, 240, 232, 0.65);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            background: #0d0305;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(201, 168, 76, 0.04);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 35px;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .testimonial-card p {
+            color: rgba(245, 240, 232, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .client-name {
+            color: var(--gold);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .client-location {
+            color: rgba(245, 240, 232, 0.4);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            margin-top: 3px;
+        }
+
+        /* BOOKING FORM */
+        .booking-section {
+            background: linear-gradient(180deg, #0d0305, var(--dark));
+        }
+
+        .booking-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .urgency-banner {
+            background: rgba(201, 168, 76, 0.1);
+            border: 1px solid var(--gold);
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 40px;
+            color: var(--gold);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .urgency-banner strong {
+            color: var(--cream);
+        }
+
+        .booking-form {
+            background: rgba(201, 168, 76, 0.03);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 50px 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gold);
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(201, 168, 76, 0.25);
+            color: var(--cream);
+            padding: 15px 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+        }
+
+        .form-group select option {
+            background: #1a0a0a;
+            color: var(--cream);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 20px;
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .form-submit:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            text-align: center;
+            color: rgba(245, 240, 232, 0.4);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.78rem;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* WHATSAPP FLOATING */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 16px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 5px 40px rgba(37, 211, 102, 0.7); }
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            background: #20c45a;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0303;
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .footer-logo span {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            color: var(--light-gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-tagline {
+            color: rgba(245, 240, 232, 0.4);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: rgba(201, 168, 76, 0.7);
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            color: rgba(245, 240, 232, 0.25);
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        /* ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .nav-cta {
+                padding: 8px 15px;
+                font-size: 0.75rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form {
+                padding: 30px 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 15px;
+                padding: 14px 18px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            The Wellness
+            <span>Room</span>
+        </div>
+        <a href="#booking" class="nav-cta">Book Session</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div>
+            <div class="hero-badge">✦ Female Only · DHA Lahore ✦</div>
+            <h1>Your Wellness.<br><em>Your Privacy.</em><br>Your Space.</h1>
+            <p class="hero-subtitle">A Premium Private Massage Experience in Lahore</p>
+            <p class="hero-description">
+                No crowds. No strangers. No rush.<br>
+                Just you — in a beautifully curated private space,<br>
+                receiving the care you truly deserve.
+            </p>
+            <div class="hero-pills">
+                <span class="pill">🔒 100% Private</span>
+                <span class="pill">✦ Young Therapists</span>
+                <span class="pill">📍 DHA Lahore</span>
+                <span class="pill">✦ 10+ Services</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">✦ Book Your Session</a>
+                <a href="https://wa.me/923168569270" class="btn-secondary">💬 WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓ scroll ↓</div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section class="why-section fade-in">
+        <p class="section-label">✦ Why The Wellness Room</p>
+        <h2 class="section-title">Comfort Comes First</h2>
+        <p class="section-subtitle">We created something that doesn't exist anywhere else in Lahore — a truly private, premium wellness experience designed exclusively for women.</p>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🔒</div>
+                <h3>Complete Privacy</h3>
+                <p>Your session takes place in a beautiful private apartment. No crowded spa. No strangers. Just you and your wellness therapist.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⏰</div>
+                <h3>Your Time. Your Pace.</h3>
+                <p>No rushing. No back-to-back appointments. You get the full time, personal attention and care that you deserve.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">👩‍⚕️</div>
+                <h3>Young Therapists</h3>
+                <p>Trained, professional and empathetic. Our therapists understand your needs and deliver results with the highest standard of care.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📍</div>
+                <h3>Location by Preference</h3>
+                <p>Sessions are arranged at a private location in DHA Lahore, selected according to your comfort and convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section fade-in">
+        <p class="section-label">✦ Our Treatments</p>
+        <h2 class="section-title">10+ Massage Experiences</h2>
+        <p class="section-subtitle">Choose what your body needs. Every session is tailored to your specific needs, preferences and desired outcome.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌿</div>
+                <h4>Full Body Massage</h4>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🦵</div>
+                <h4>Legs & Glutes Massage</h4>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💆</div>
+                <h4>Head & Shoulder Massage</h4>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🦶</div>
+                <h4>Foot Massage</h4>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h4>Relaxation Massage</h4>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌸</div>
+                <h4>+ 5 More Wellness Options</h4>
+            </div>
+        </div>
+
+        <div class="gold-divider">
+            <span class="lotus">✦</span>
+        </div>
+        <p style="text-align:center; color: rgba(245,240,232,0.6); font-family: Arial; font-size: 0.9rem; font-style: italic;">
+            "Your session. Your preference. Your pace."
+        </p>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section fade-in">
+        <p class="section-label">✦ Investment in Yourself</p>
+        <h2 class="section-title">Premium by Design</h2>
+        <p class="section-subtitle">Packages tailored according to your chosen service and duration. Because you deserve the very best.</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Essential</h3>
+                <div class="price">PKR 7,000</div>
+                <div class="price-sub">60 MINUTES</div>
+                <ul class="pricing-features">
+                    <li>Single Area Focus</li>
+                    <li>Head, Shoulder or Foot</li>
+                    <li>Private Setting</li>
+                    <li>Young Therapist</li>
+                    <li>Premium Oils Included</li>
+                </ul>
+                <a href="#booking" class="btn-primary" style="display:block; text-align:center;">Book Now</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <h3>Signature</h3>
+                <div class="price">PKR 15,000</div>
+                <div class="price-sub">90 MINUTES</div>
+                <ul class="pricing-features">
+                    <li>Full Body Experience</li>
+                    <li>Customised Technique</li>
+                    <li>Private Luxury Setting</li>
+                    <li>Premium Aromatherapy Oils</li>
+                    <li>Consultation Included</li>
+                </ul>
+                <a href="#booking" class="btn-primary" style="display:block; text-align:center;">Book Now</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Elite</h3>
+                <div class="price">PKR 25,000</div>
+                <div class="price-sub">120+ MINUTES</div>
+                <ul class="pricing-features">
+                    <li>Full Wellness Experience</li>
+                    <li>Multiple Techniques</li>
+                    <li>Priority Booking</li>
+                    <li>Complimentary Add-on</li>
+                    <li>Seasonal Offer Eligible</li>
+                </ul>
+                <a href="#booking" class="btn-primary" style="display:block; text-align:center;">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY PROMISE -->
+    <section class="privacy-section fade-in">
+        <p class="section-label">✦ Our Promise to You</p>
+        <h2 class="section-title">Privacy Isn't an Extra.<br>It's Part of the Experience.</h2>
+        <br><br>
+        <div class="privacy-grid">
+            <div class="privacy-item">
+                <div class="privacy-number">01</div>
+                <h4>Confidential Booking</h4>
+                <p>Your information is never shared. Booking is discreet and handled privately via WhatsApp or our form.</p>
+            </div>
+            <div class="privacy-item">
+                <div class="privacy-number">02</div>
+                <h4>Private Location</h4>
+                <p>Sessions are held in a beautiful, secure private apartment — not a public spa. Location shared after confirmation.</p>
+            </div>
+            <div class="privacy-item">
+                <div class="privacy-number">03</div>
+                <h4>Female Only Space</h4>
+                <p>Every person in your session environment is female. Your comfort and safety are non-negotiable.</p>
+            </div>
+            <div class="privacy-item">
+                <div class="privacy-number">04</div>
+                <h4>No Judgement Zone</h4>
+                <p>Feel free to discuss your needs openly. This is your space — completely safe, warm and welcoming.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section fade-in">
+        <p class="section-label">✦ Client Experiences</p>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Real words from real women who chose to invest in their wellness.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Finally found a place in Lahore where I feel completely at ease. The privacy, the professionalism — everything exceeded my expectations. I've already booked my third session."</p>
+                <div class="client-name">Sana Azhar</div>
+                <div class="client-location">DHA Phase 5, Lahore</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"As a working woman, I'm always stressed. The Wellness Room gave me exactly what I needed — real relaxation in a truly private setting. The therapists were incredibly skilled."</p>
+                <div class="client-name">Zara Naheed</div>
+                <div class="client-location">DHA Phase 6, Lahore</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"I was hesitant at first but the process was so discreet and professional. The space was beautiful and the therapists were wonderful. Worth every rupee. Highly recommended."</p>
+                <div class="client-name">Ayesha Malik</div>
+                <div class="client-location">DHA Phase 8, Lahore</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="booking-section" id="booking">
+        <p class="section-label">✦ Secure Your Session</p>
+        <h2 class="section-title">Book Your Private Session</h2>
+        <p class="section-subtitle">Fill in the form below and we will confirm your appointment within 2 hours via WhatsApp.</p>
+
+        <div class="booking-container">
+            <div class="urgency-banner">
+                🔴 <strong>Only 5 Exclusive Slots Available This Month</strong> — Reserve Yours Today
+            </div>
+
+            <form class="booking-form" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>WhatsApp Number</label>
+                        <input type="tel" placeholder="+92 3XX XXXXXXX" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Service</label>
+                    <select required>
+                        <option value="" disabled selected>Select your treatment</option>
+                        <option>Full Body Massage — From PKR 15,000</option>
+                        <option>Head & Shoulder Massage — From PKR 7,000</option>
+                        <option>Foot Massage — From PKR 7,000</option>
+                        <option>Legs & Glutes Massage — From PKR 10,000</option>
+                        <option>Relaxation Massage — From PKR 12,000</option>
+                        <option>Elite Wellness Package — PKR 25,000</option>
+                        <option>Not Sure — Help Me Choose</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <select required>
+                            <option value="" disabled selected>Select time</option>
+                            <option>Morning (10 AM – 12 PM)</option>
+                            <option>Afternoon (12 PM – 3 PM)</option>
+                            <option>Evening (3 PM – 6 PM)</option>
+                            <option>Night (6 PM – 9 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Area in DHA</label>
+                    <select>
+                        <option value="" disabled selected>Select your phase</option>
+                        <option>DHA Phase 1</option>
+                        <option>DHA Phase 2</option>
+                        <option>DHA Phase 3</option>
+                        <option>DHA Phase 4</option>
+                        <option>DHA Phase 5</option>
+                        <option>DHA Phase 6</option>
+                        <option>DHA Phase 7</option>
+                        <option>DHA Phase 8</option>
+                        <option>Other Area in Lahore</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Any Special Requests</label>
+                    <textarea rows="3" placeholder="Share any preferences, health concerns or specific areas of focus..."></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">✦ Reserve My Session Now</button>
+
+                <p class="form-note">
+                    🔒 Your information is 100% confidential · We will confirm via WhatsApp within 2 hours<br>
+                    Female-only · Professional · Private
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            The Wellness Room
+            <span>Lahore</span>
+        </div>
+        <p class="footer-tagline">Professional. Private. Client-Focused.</p>
+        <div class="footer-links">
+            <a href="#booking">Book Session</a>
+            <a href="https://wa.me/923168569270">WhatsApp</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+        <p class="footer-bottom">© 2025 The Wellness Room, Lahore · Female Only · All Rights Reserved</p>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/923168569270?text=Hi%2C%20I%20would%20like%20to%20book%20a%20session%20at%20The%20Wellness%20Room" 
+       class="whatsapp-float" target="_blank">
+        💬 Book via WhatsApp
+    </a>
+
+    <script>
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form submission handler
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.form-submit');
+            btn.textContent = '✓ Request Sent! We\'ll WhatsApp You Soon';
+            btn.style.background = '#1B3A2D';
+            btn.style.color = '#C9A84C';
+            
+            // Redirect to WhatsApp after 2 seconds
+            setTimeout(() => {
+                window.open('https://wa.me/923168569270?text=Hi%2C%20I%20just%20submitted%20a%20booking%20request%20on%20your%20website%20for%20The%20Wellness%20Room', '_blank');
+            }, 2000);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
